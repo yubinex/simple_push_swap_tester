@@ -10,5 +10,7 @@ Then run the tests:
 
 ```bash
 ./autotest.sh
+```
+```bash
 ./walkthrough.sh
 ```
