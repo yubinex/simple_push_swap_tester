@@ -382,7 +382,7 @@ echo -e "    ${DIM}\$ ./push_swap 3 2 1 | ./checker_linux 3 2 1${RESET}"
 echo -e "    ${DIM}\$ ./push_swap --bench --adaptive 5 4 3 2 1 2>&1${RESET}"
 echo -e "    ${DIM}\$ ./push_swap --simple 5 4 3 2 1 | wc -l${RESET}"
 echo ""
-echo "  Run ./test.sh for the full automated suite."
+echo "  Run ./autotest.sh for the full automated suite."
 echo ""
 
 while true; do

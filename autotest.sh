@@ -118,6 +118,7 @@ run_error_test "Float"                       "1.5"
 run_error_test "Duplicate values"            "1" "2" "3" "2"
 run_error_test "INT_MAX + 1 overflow"        "2147483648"
 run_error_test "INT_MIN - 1 underflow"       "-2147483649"
+run_error_test "20-digit number (long overflow)" "18446744073709551616"
 run_error_test "Empty string argument"       ""
 run_error_test "Plus-prefixed non-integer"   "+abc"
 
