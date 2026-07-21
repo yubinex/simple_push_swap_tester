@@ -253,7 +253,21 @@ else
 	correctness_test 500  3 "500 numbers (3 runs)"
 fi
 
-# ── 5. performance benchmarks ─────────────────────────────────────────────────
+# ── 5. bench mode output ──────────────────────────────────────────────────────
+
+section "Bench mode (--bench)"
+
+bench_output=$($PUSH_SWAP --bench --adaptive 5 4 3 2 1 2>&1 >/dev/null)
+
+for field in disorder strategy total_ops sa sb ss pa pb ra rb rr rra rrb rrr; do
+	if echo "$bench_output" | grep -qi "$field"; then
+		ok "--bench output contains '$field'"
+	else
+		fail "--bench output missing '$field'"
+	fi
+done
+
+# ── 6. performance benchmarks ─────────────────────────────────────────────────
 
 section "Performance benchmarks — 100 numbers (5 runs)"
 
